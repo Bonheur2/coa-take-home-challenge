@@ -1,23 +1,22 @@
-body, html{
+body, html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     background-color: black;
-} 
+}
 
-.container{
+.container {
     display: flex;
     justify-content: center;
     padding: 10px;
-    gap: 10px;
+    gap: 2px;
 }
 
-.card{
+.card {
     position: relative;
-    height: 100%;
-    flex: 1 1 calc(25%- 20px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    flex: 1 1 calc(25% - 20px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     overflow: hidden;
     background-color: white;
@@ -28,85 +27,72 @@ body, html{
 }
 
 .card1 {
-    background-image: url('./assets/images/fox.jpg');
+    background-image: url('./assets/image/fox.jpg');
 }
 
 .card2 {
-    background-image: url('./assets/images/whale.jpg');
+    background-image: url('./assets/image/whale.jpg');
 }
 
 .card3 {
-    background-image: url('./assets/images/baboon.jpg');
+    background-image: url('./assets/image/baboon.jpg');
 }
 
 .card4 {
-    background-image: url('./assets/images/deer.jpg');
+    background-image: url('./assets/image/deer.jpg');
 }
 
-.card:hover{
+.card:hover {
     transform: scale(1.05);
     opacity: 0.1;
     transition: transform 0.5s ease, opacity 0.5s ease;
 }
-.card:hover .more{
+
+.card:hover .more {
     display: block;
-    transition: display 20s ease;
 }
 
-.info{
-    /* position: absolute; */
+.info {
+    position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 30%; 
+    height: 30%;
     padding: 10px;
     box-sizing: border-box;
     color: white;
-    padding: 0 2rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     padding-bottom: 2rem;
 }
 
-.info .name{
-    width: 65%;
-    height: 76px;
-    gap: 0px;
-    display: block;
+.info .name {
     font-family: "DIN Condensed";
-    font-size: 38px;
+    font-size: 25px;
     font-weight: 700;
     line-height: 38px;
     text-align: left;
-    transition: display 20s ease;
 }
 
-.info .location{
-    font-size: 16px; 
-    font-family:'Poppins';
+.info .location {
+    font-family: 'Poppins';
     font-size: 12px;
     font-weight: 400;
-    display: block;
     line-height: 16.02px;
     text-align: left;
-    transition: display 20s ease;
 }
 
- .info .more {
+.info .more {
     display: none;
-    transition: display 60s ease;
-    color: skyblue;
+    color: rgb(102, 195, 231);
     font-weight: bold;
-} 
+}
 
 /* Responsive adjustments */
 @media (max-width: 1200px) {
     .card {
         flex: 1 1 calc(33.333% - 20px);
-    }
-    .info{
-        display: none;
     }
 }
 
@@ -114,7 +100,6 @@ body, html{
     .card {
         flex: 1 1 calc(50% - 20px);
     }
-   
 }
 
 @media (max-width: 480px) {
@@ -126,6 +111,6 @@ body, html{
 /* Smartwatch media query */
 @media (max-width: 320px) {
     .info {
-        display: block; 
+        display: block;
     }
 }
