@@ -50,6 +50,7 @@ body, html {
 
 .card:hover .more {
     display: block;
+    transition: display 20s ease;
 }
 
 .info {
@@ -68,10 +69,10 @@ body, html {
 }
 
 .info .name {
-    font-family: "DIN Condensed";
-    font-size: 25px;
+    font-family: "DIN Condensed", sans-serif;
+    font-size: 20px;
     font-weight: 700;
-    line-height: 38px;
+    line-height: 30px;
     text-align: left;
 }
 
