@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DIN+Condensed:wght@700&display=swap');
+
 body,
 html {
     margin: 0;
@@ -11,11 +13,12 @@ html {
     display: flex;
     justify-content: center;
     padding: 10px;
-    gap: 2px;
+    gap: 8px;
 }
 
 .card {
     position: relative;
+    height: 100%;
     flex: 1 1 calc(25% - 20px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
@@ -46,7 +49,6 @@ html {
 .card:hover {
     transform: scale(1.05);
     opacity: 0.1;
-    overflow: hidden;
     transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
@@ -65,17 +67,21 @@ html {
     box-sizing: border-box;
     color: white;
     display: flex;
+    padding: 0 2rem;
     flex-direction: column;
     justify-content: flex-end;
-    padding-bottom: 2rem;
 }
 
 .info .name {
+    width: 65%;
+    height: 76px;
+    display: block;
     font-family: "DIN Condensed", sans-serif;
-    font-size: 28px;
+    font-size: 18px;
     font-weight: 700;
     line-height: 35px;
     text-align: left;
+    transition: display 20s ease;
 }
 
 .info .location {
@@ -84,12 +90,14 @@ html {
     font-weight: 400;
     line-height: 16.02px;
     text-align: left;
+    transition: display 20s ease;
 }
 
 .info .more {
     display: none;
     color: rgb(102, 195, 231);
     font-weight: bold;
+    transition: display 20s ease;
 }
 
 /* Responsive adjustments */
